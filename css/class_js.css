@@ -1,0 +1,15 @@
+.bar_list > span
+{
+    background-color: #a55ae8;
+}
+
+.bar_list > span:nth-child(1)
+{
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+.display_error
+{
+    display: flex;
+}
