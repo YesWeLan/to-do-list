@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- jQuery-->
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/class_js.css">
+        <link rel="stylesheet" type="text/css" href="css/animations.css">
+
+        <title>My List</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <!-- title -->
+            <div class="title">
+                <h1>My List<span class="material-icons">description</span></h1>
+            </div>
+            <!-- user input -->
+            <div class="user_input">
+                <form>
+                    <input type="text" minlength="1" maxlength="999" placeholder="Ajouter une tâche" required>
+                    <button  onclick="addNewList();clearInput()"><span class="material-icons">add_circle_outline</span></button>
+                    <!-- error -->
+                    <div class="error">
+                        <!--<p>Caractères autorisés:</p>-->
+                        <!--<b>A-Z, a-z, 0-9, ., -, ', ",  _, %, €, &, @, ,é ,è, à, î, ï, û, ü, ç</b>-->
+                    </div>
+                </form>
+            </div>
+            <!-- list -->
+            <div class="list_container">
+                <ul class="list"></ul>
+            </div>
+        </div>
+        <!-- script -->
+        <script src="js/functions.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
