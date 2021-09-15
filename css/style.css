@@ -1,0 +1,261 @@
+:root
+{
+    --lin-2: linear .2s;
+    --lin-3: linear .3s;
+    --lin-5: linear .5s;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    scroll-behavior: smooth;
+    scrollbar-color: #6a47d3 #deebfd;
+    scrollbar-width: thin;
+    -webkit-tap-highlight-color: transparent;
+}
+
+*::-webkit-scrollbar
+{
+    width: 5px;
+}
+
+*::-webkit-scrollbar-thumb
+{
+    background-color: #6a47d3;
+}
+
+*::-webkit-scrollbar-track-piece
+{
+    background-color: #deebfd;
+}
+
+*::-webkit-scrollbar-button
+{
+    display: none;
+}
+
+html,
+body
+{
+    height: 100vh;
+    background-image: linear-gradient(135deg, rgb(32, 186, 230),rgb(110, 6, 173));
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container
+{
+    width:450px;
+    height: 570px;
+    background-color: #e3ecf5;
+    border-radius: 30px;
+   box-shadow:  20px 20px 40px rgba(43,43,43,.5),
+                            -20px -20px 40px rgba(43,43,43,.5);
+    overflow: hidden;
+}
+
+/* title */
+.title
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    background-image: linear-gradient(135deg, rgb(32, 186, 230),rgb(110, 6, 173));
+    border-radius: 0 0 50% 50%;
+}
+
+.title > h1
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Acme';
+    font-weight: normal;
+    letter-spacing: 1px;
+    color: white;
+}
+
+
+.title > h1 > span
+{
+    font-size: 1em;
+}
+
+form
+{
+    position: relative;
+}
+
+/* input */
+.user_input
+{
+    padding: 30px 0;
+}
+
+.user_input > form
+{
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.user_input > form > input
+{
+    width: 80%;
+    height: 35px;
+    font-family: 'Kalam';
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px #775acc solid;
+    caret-color: #775acc;
+    outline: none;
+}
+
+.user_input > form > button
+{
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #775acc;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color var(--lin-3);
+}
+
+.user_input > form > button:hover
+{
+    background-color: #503b8d;
+}
+
+.user_input > form > button > span
+{
+    transition: color var(--lin-5);
+    animation: fadeIn var(--lin-5);
+}
+
+.user_input > form > button:hover > span
+{
+    color: limegreen;
+}
+
+/* error */
+.error
+{
+    display: none;
+    width: 100%;
+    min-height: 30px;
+    position: absolute;
+    top: 38px;
+    left: 0;
+    z-index: 5;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: 'Acme';
+    letter-spacing: 2px;
+    font-size: 15px;
+    color: white;
+    background-color: firebrick;
+    animation: fadeIn var(--lin-5);
+}
+
+.error > p
+{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+/* list */
+.list_container
+{
+    width: 100%;
+    height: 385px;
+}
+
+.list
+{
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.list > li
+{
+    width: 100%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    background-color: #775acc;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background-color var(--lin-3);
+    animation: rightCenter var(--lin-3);
+}
+
+.list > li:hover
+{
+    background-color: #a55ae8;
+}
+
+.list > li:hover > span:nth-child(2)
+{
+    color: firebrick;
+}
+
+.list > li > span
+{
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.list > li > span:nth-child(1)
+{
+    width: 410px;
+    padding-left: 5px;
+    font-family: 'Kalam';
+    font-size: 17px;
+    color: white;
+    word-break: break-all;
+ }
+
+.list > li > span:nth-child(2)
+{
+    display: flex;
+    width: 40px;
+    font-size: 25px;
+    justify-content: center;
+    align-self: center;
+    color: white;
+    cursor: pointer;
+    transition: color var(--lin-3), background-color var(--lin-3);
+    
+}
+
+.list > li > span:nth-child(2):hover
+{
+    color: white;
+    background-color: firebrick;
+}
